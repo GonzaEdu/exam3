@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Registrar Atención</title>
+    </head>
+    <body>
+        <h1>Registrar Atención</h1>
+        <form action="/registrarAtencion" method="get">
+            <label for="idPaciente">ID Paciente:</label>
+            <input type="number" id="idPaciente" name="idPaciente" required><br>
+
+            <label for="fechaConsulta">Fecha de Consulta:</label>
+            <input type="date" id="fechaConsulta" name="fechaConsulta" required><br>
+
+            <label for="diagnostico">Diagnóstico:</label>
+            <textarea id="diagnostico" name="diagnostico" required></textarea><br>
+
+            <label for="tratamiento">Tratamiento:</label>
+            <textarea id="tratamiento" name="tratamiento" required></textarea><br>
+
+            <input type="submit" value="Registrar">
+        </form>
+    </body>
+</html>

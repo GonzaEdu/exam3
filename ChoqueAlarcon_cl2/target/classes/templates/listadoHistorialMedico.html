@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Historial Médico</title>
+    </head>
+    <body>
+        <h1>Historial Médico de Paciente</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID Historial</th>
+                    <th>Fecha de Consulta</th>
+                    <th>Diagnóstico</th>
+                    <th>Tratamiento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <th:block th:each="h : ${listaHistorial}">
+                    <tr>
+                        <td th:text="${h.idHistorial}"></td>
+                        <td th:text="${h.fechaConsulta}"></td>
+                        <td th:text="${h.diagnostico}"></td>
+                        <td th:text="${h.tratamiento}"></td>
+                    </tr>
+                </th:block>
+            </tbody>
+        </table>
+    </body>
+</html>

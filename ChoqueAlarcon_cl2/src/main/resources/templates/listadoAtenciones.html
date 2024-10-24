@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Listado de Atenciones</title>
+    </head>
+    <body>
+        <h1>Listado de Atenciones</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID Atención</th>
+                    <th>ID Paciente</th>
+                    <th>Fecha de Atención</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <th:block th:each="a : ${listaAtenciones}">
+                    <tr>
+                        <td th:text="${a.idAtencion}"></td>
+                        <td th:text="${a.idPaciente}"></td>
+                        <td th:text="${a.fechaAtencion}"></td>
+                        <td th:text="${a.descripcion}"></td>
+                    </tr>
+                </th:block>
+            </tbody>
+        </table>
+    </body>
+</html>
